@@ -17,14 +17,15 @@ async function main()
 function movieHTML(movie)
 {
     return `
-        <div class="movie__card clickable">
+        <div class="movie__card clickable" onclick="showMovieDetail('${movie.id}')">
             <img class="movie__img" src="${movie.image}" alt="">
             <p class="movie__title">${movie.title}</h5>
             <p class="movie__rating">${movie.rt_score}/100</p>
             <p class="movie__duration">${movie.running_time} mins</p>
         </div>
-    `
+        `
 }
+
 main()
 
 function updateDisplay(selection)
@@ -49,4 +50,10 @@ function updateDisplay(selection)
     }
     
     movieDisplayElem.innerHTML = movieOrder.map(movie => movieHTML(movie)).join("");
+}
+
+function showMovieDetail(movieId)
+{   
+    localStorage.setItem("id", movieId)
+    window.location.href = `${window.location.origin}/movie.html`
 }

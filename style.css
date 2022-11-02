@@ -9,7 +9,7 @@
     font-weight: 400;
 }
 
-.search-container{
+.container{
     margin: 0 auto;
     padding: 32px 0;
     width: 100%;
@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 
-.search-row{
+.row{
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -129,15 +129,18 @@ a{
 
 .search__filter{
     display: flex;
+    align-items: center;
 }
 
 .search__drop-down-menu{
     margin-left: 16px;
+    padding: 4px 8px;
+    font-size: 18px;
 }
 
 /*
 
-    MOVIES
+    MOVIES LIST
 
 */
 
@@ -178,3 +181,31 @@ a{
     text-align: center;
 }
 
+/*
+
+    MOVIE DISPLAY
+
+*/
+
+.bold{
+    font-weight: 700;
+}
+
+.movie{
+    display: flex;
+    width: 100%;
+}
+
+.movie__img-large{
+    max-width: 300px;
+    margin: 0 80px 0 40px;
+}
+
+.movie__details{
+    padding: 32px;
+}
+
+.movie__detail{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
