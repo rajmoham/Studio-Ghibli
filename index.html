@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7d8f1910d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <figure class="logo">
+                <img class="logo__img" src="./assets/logo.svg" alt="">
+            </figure>
+            <ul class="nav__links">
+                <li><a class="nav__link nav__link--underline" href="">Home</a></li>
+                <li><a class="nav__link nav__link--underline" href="">Search</a></li>
+                <li><a class="nav__link nav__link--boxed" href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="search-container">
+            <div class="search-row">
+                <h1 class="title">Search Studio Ghibli Movie</h1>
+                <div class="search__wrapper clickable">
+                    <input class="search__input" type="text" placeholder="Search">
+                    <i class="fas fa-magnifying-glass clickable"></i>
+                </div>
+                <div class="search__header">
+                    <h4 class="search__results">Search Results for: </h4>
+                    <div class="search__filter">
+                        <p class="search__text">Sort: </p>
+                        <select class="search__drop-down-menu" onchange="updateDisplay(this)" id="">
+                            <option class="search_drop-down-item" value="default">Default</option>
+                            <option class="search_drop-down-item" value="rating">Rating (High to Low)</option>
+                            <option class="search_drop-down-item" value="duration-lth">Duration (Low to High)</option>
+                            <option class="search_drop-down-item" value="duration-htl">Duration (High to Low)</option>    
+                        </select>
+                    </div>
+                </div>
+                <div class="movie__container--grid">
+                    <div class="movie__card clickable">
+                        <img class="movie__img" src="./assets/img_placeholder.png" alt="">
+                        <p class="movie__title">-</h5>
+                        <p class="movie__rating">-</p>
+                        <p class="movie__duration">-</p>
+                    </div>
+                    <div class="movie__card clickable">
+                        <img class="movie__img" src="./assets/img_placeholder.png" alt="">
+                        <p class="movie__title">-</h5>
+                        <p class="movie__rating">-</p>
+                        <p class="movie__duration">-</p>
+                    </div>
+                    <div class="movie__card clickable">
+                        <img class="movie__img" src="./assets/img_placeholder.png" alt="">
+                        <p class="movie__title">-</h5>
+                        <p class="movie__rating">-</p>
+                        <p class="movie__duration">-</p>
+                    </div>
+                    <div class="movie__card clickable">
+                        <img class="movie__img" src="./assets/img_placeholder.png" alt="">
+                        <p class="movie__title">-</h5>
+                        <p class="movie__rating">-</p>
+                        <p class="movie__duration">-</p>
+                    </div>
+                    <div class="movie__card clickable">
+                        <img class="movie__img" src="./assets/img_placeholder.png" alt="">
+                        <p class="movie__title">-</h5>
+                        <p class="movie__rating">-</p>
+                        <p class="movie__duration">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="app.js"></script>
+</html>
