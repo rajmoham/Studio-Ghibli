@@ -15,22 +15,22 @@
                 <img class="logo__img" src="./assets/logo.svg" alt="">
             </figure>
             <ul class="nav__links">
-                <li><a class="nav__link nav__link--underline" href="">Home</a></li>
-                <li><a class="nav__link nav__link--underline" href="">Search</a></li>
-                <li><a class="nav__link nav__link--boxed" href="">Contact</a></li>
+                <li><a class="nav__link nav__link--underline" href="#">Home</a></li>
+                <li><a class="nav__link nav__link--underline" href="#">Search</a></li>
+                <li><a class="nav__link nav__link--underline" target="_blank" href="https://ghibliapi.herokuapp.com/">Source</a></li>
             </ul>
         </nav>
     </header>
-    <section>
+    <section id="main">
         <div class="container">
             <div class="row">
                 <h1 class="title">Search Studio Ghibli Movie</h1>
-                <div class="search__wrapper clickable">
-                    <input class="search__input" type="text" placeholder="Search">
-                    <i class="fas fa-magnifying-glass clickable"></i>
+                <div class="search__wrapper">
+                    <input class="search__input" id="search__input" type="text" placeholder="Search" onkeypress="checkEnterPressed(event)">
+                    <i class="fas fa-magnifying-glass clickable clickable" onclick="searchResult()"></i>
                 </div>
                 <div class="search__header">
-                    <h4 class="search__results">Search Results for: </h4>
+                    <h4 class="search__results"></h4>
                     <div class="search__filter">
                         <p class="search__text">Sort: </p>
                         <select class="search__drop-down-menu" onchange="updateDisplay(this)" id="">
@@ -71,5 +71,12 @@
         </div>
     </section>
 </body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-white">Created by <a class="text-white" target="_blank" href="http://rajmoham.github.io">Raj Mohammad</a></p>
+        </div>
+    </div>
+</footer>
 <script src="app.js"></script>
 </html>
