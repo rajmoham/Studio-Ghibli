@@ -112,8 +112,14 @@ a{
     margin-bottom: 16px;
 }
 
+.search__result--container{
+    display: flex;
+    align-items: center;
+}
+
 .search__results{
     font-size: 18px;
+    margin-right: 12px;
 }
 
 .search__filter{
@@ -127,10 +133,16 @@ a{
     font-size: 18px;
 }
 
+.text-link{
+    color: rgb(37, 37, 238);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
 /*
 
     MOVIES LIST
-
+ 
 */
 
 #main{

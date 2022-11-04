@@ -61,14 +61,15 @@ function showMovieDetail(movieId)
 function searchResult()
 {
     const searchField = document.querySelector("#search__input").value
-    const searchedEl = document.querySelector(".search__results")
+    const searchedEl = document.querySelector(".search__result--container")
     if (searchField === "")
     {
         searchedEl.innerHTML = ""
     }
     else
     {
-        searchedEl.innerHTML = `Search Results for: "${searchField}"`
+        searchedEl.innerHTML = `<h4 class="search__results">Search Results for : "${searchField}"</h4>
+                                <p class="text-link clickable" onclick="clearResults()">Clear Results</p>`
     }
     moviesDisplay = movies.filter((movie) => movie.title.toLowerCase().includes(searchField.toLowerCase()))
     movieDisplayElem.innerHTML = moviesDisplay.map(movie => movieHTML(movie)).join("")
@@ -80,4 +81,10 @@ function checkEnterPressed(event)
     {
         searchResult()
     }
+}
+
+function clearResults()
+{
+    document.querySelector("#search__input").value = ""
+    searchResult()
 }
