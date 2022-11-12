@@ -230,4 +230,22 @@ footer{
     .movie__container--grid{
         grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
     }
+
+    .nav__link--underline{
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .movie__container--grid{
+        grid-template-columns: 50% 50%;
+    }
+
+    .nav__link{
+        display: none;
+    }
+
+    nav{
+        justify-content: center
+    };
 }

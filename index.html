@@ -17,7 +17,7 @@
             <ul class="nav__links">
                 <li><a class="nav__link nav__link--underline" href="#">Home</a></li>
                 <li><a class="nav__link nav__link--underline" href="#">Search</a></li>
-                <li><a class="nav__link nav__link--underline" target="_blank" href="https://ghibliapi.herokuapp.com/">Source</a></li>
+                <li><a class="nav__link" target="_blank" href="https://ghibliapi.herokuapp.com/">Source</a></li>
             </ul>
         </nav>
     </header>
@@ -34,8 +34,8 @@
                     </div>
                     <div class="search__filter">
                         <p class="search__text">Sort: </p>
-                        <select class="search__drop-down-menu" onchange="updateDisplay(this)" id="">
-                            <option class="search_drop-down-item" value="default">Default</option>
+                        <select class="search__drop-down-menu" defaultValue="default" onchange="updateDisplay(event.target.value)" id="">
+                            <option class="search_drop-down-item" value="default" disabled>Sort</option>
                             <option class="search_drop-down-item" value="rating">Rating (High to Low)</option>
                             <option class="search_drop-down-item" value="duration-lth">Duration (Low to High)</option>
                             <option class="search_drop-down-item" value="duration-htl">Duration (High to Low)</option>    

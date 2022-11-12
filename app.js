@@ -11,7 +11,6 @@ async function getData()
 async function main()
 {
     movies = await getData()
-    movies.sort((a, b) => a.title.localeCompare(b.title))
     movieDisplayElem.innerHTML = movies.map(movie => movieHTML(movie)).join("")
 }
 
@@ -29,28 +28,37 @@ function movieHTML(movie)
 
 main()
 
-function updateDisplay(selection)
-{
-    const option = selection.value;
-    if (option === "default")
+function updateDisplay(option)
+{   
+    if (option === "rating")
     {
-        moviesDisplay.sort((a, b) => a.title.localeCompare(b.title))
-    }
-    else if (option === "rating")
-    {
-        moviesDisplay.sort((a, b) => b.rt_score - a.rt_score)
+        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.rt_score - a.rt_score).map(film => movieHTML(film)).join("")
     }
     else if (option === "duration-htl")
     {
-        moviesDisplay.sort((a, b) => b.running_time - a.running_time)
+        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.running_time - a.running_time).map(film => movieHTML(film)).join("")
     }
     else if (option === "duration-lth")
     {
-        moviesDisplay.sort((a, b) => a.running_time - b.running_time)
+        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => a.running_time - b.running_time).map(film => movieHTML(film)).join("")
     }
+
     
-    movieDisplayElem.innerHTML = moviesDisplay.map(movie => movieHTML(movie)).join("");
 }
+
+
+    /* if (option === "rating")
+    {
+        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.rt_score - a.rt_score)
+    }
+    else if (option === "duration-htl")
+    {
+        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.running_time - a.running_time)
+    }
+    else if (option === "duration-lth")
+    {
+        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => a.running_time - b.running_time)
+    } */
 
 function showMovieDetail(movieId)
 {   
