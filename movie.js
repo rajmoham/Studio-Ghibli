@@ -3,10 +3,13 @@ const movieDisplayEl = document.querySelector(".movie")
 
 async function getData()
 {
-    query = `https://ghibliapi.herokuapp.com/films/${movieId}`;
+    /* query = `https://ghibliapi.herokuapp.com/films/${movieId}`; */
+    query = "./v3/films.json"
     const promise = await fetch(query);
     const data = await promise.json();
-    movieDisplayEl.innerHTML = movieHTML(data);
+    movie_data = data.filter(movie=> movie.id == movieId)[0]
+    
+    movieDisplayEl.innerHTML = movieHTML(movie_data);
 }
 
 getData()

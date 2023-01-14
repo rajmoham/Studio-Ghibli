@@ -3,8 +3,11 @@ let movies
 let moviesDisplay
 async function getData()
 {
-    const promise = await fetch("https://ghibliapi.herokuapp.com/films")
+    /* const promise = await fetch("https://ghibliapi.herokuapp.com/films") */
+
+    const promise = await fetch("./v3/films.json")
     const data = JSON.parse(JSON.stringify(await promise.json()))
+    console.log(data)
     return data
 }
 
@@ -12,6 +15,8 @@ async function main()
 {
     movies = await getData()
     movieDisplayElem.innerHTML = movies.map(movie => movieHTML(movie)).join("")
+
+    document.querySelector("#search__input").value = ""
 }
 
 function movieHTML(movie)
@@ -45,20 +50,6 @@ function updateDisplay(option)
 
     
 }
-
-
-    /* if (option === "rating")
-    {
-        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.rt_score - a.rt_score)
-    }
-    else if (option === "duration-htl")
-    {
-        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.running_time - a.running_time)
-    }
-    else if (option === "duration-lth")
-    {
-        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => a.running_time - b.running_time)
-    } */
 
 function showMovieDetail(movieId)
 {   

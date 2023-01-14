@@ -7,17 +7,20 @@
     <title>Studio Ghibli</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7d8f1910d8.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./v2/films.json"></script>
 </head>
 <body>
     <header id="header">
         <nav>
             <figure class="logo">
-                <img class="logo__img" src="./assets/logo.svg" alt="">
+                <a href="/">
+                    <img class="logo__img" src="./assets/logo.svg" alt="">
+                </a>
             </figure>
             <ul class="nav__links">
-                <li><a class="nav__link nav__link--underline" href="#">Home</a></li>
-                <li><a class="nav__link nav__link--underline" href="#">Search</a></li>
-                <li><a class="nav__link" target="_blank" href="https://ghibliapi.herokuapp.com/">Source</a></li>
+                <li><a class="nav__link nav__link--underline" href="/">Home</a></li>
+                <li><a class="nav__link nav__link--underline" href="/">Search</a></li>
+                <li><a class="nav__link nav__link--underline" target="_blank" href="./v3/films.json">Source</a></li>
             </ul>
         </nav>
     </header>
@@ -75,7 +78,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <p class="text-white">Created by <a class="text-white" target="_blank" href="http://rajmoham.github.io">Raj Mohammad</a></p>
+            <p class="text-white">Created by <a class="text-white underline" target="_blank" href="http://rajmoham.github.io">Raj Mohammad</a></p>
         </div>
     </div>
 </footer>
