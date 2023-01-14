@@ -37,15 +37,15 @@ function updateDisplay(option)
 {   
     if (option === "rating")
     {
-        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.rt_score - a.rt_score).map(film => movieHTML(film)).join("")
+        movieDisplayElem.innerHTML = moviesDisplay.slice().sort((a, b) => b.rt_score - a.rt_score).map(film => movieHTML(film)).join("")
     }
     else if (option === "duration-htl")
     {
-        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => b.running_time - a.running_time).map(film => movieHTML(film)).join("")
+        movieDisplayElem.innerHTML = moviesDisplay.slice().sort((a, b) => b.running_time - a.running_time).map(film => movieHTML(film)).join("")
     }
     else if (option === "duration-lth")
     {
-        movieDisplayElem.innerHTML = movies.slice().sort((a, b) => a.running_time - b.running_time).map(film => movieHTML(film)).join("")
+        movieDisplayElem.innerHTML = moviesDisplay.slice().sort((a, b) => a.running_time - b.running_time).map(film => movieHTML(film)).join("")
     }
 
     
