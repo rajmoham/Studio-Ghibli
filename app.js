@@ -15,7 +15,7 @@ async function main()
 {
     movies = await getData()
     movieDisplayElem.innerHTML = movies.map(movie => movieHTML(movie)).join("")
-
+    moviesDisplay = movies.slice()
     document.querySelector("#search__input").value = ""
 }
 
